@@ -14,7 +14,7 @@ const profile = require('./routes/api/profile.js');
 const db = require('./config/keys.js').mongoURI;
 
 // 使用body-parser 中间件
-app.use(bodyParser.urlencoded({extended: false}));
+app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
 // connect to mongodb
