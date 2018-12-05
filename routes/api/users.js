@@ -26,7 +26,7 @@ router.post('/register', (req, res) => {
       if (user) {
         return res.status(400).json('邮箱已被注册！');
       } else {
-        const avatar = gravatar.url(req.body.email, { s: '200', r: 'pg', d: 'mm' });
+        const avatar = gravatar.url(req.body.email, { s: '200', r: 'pg', d: 'mm' }, true);
         const newUser = new User({
           name: req.body.name,
           email: req.body.email,
