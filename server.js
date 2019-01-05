@@ -39,7 +39,7 @@ app.get('/', (req, res) => {
 
 // 使用路由
 app.use('/api/users', users);
-app.use('/api/profile', profile);
+app.use('/api/profiles', profile);
 
 const port = process.env.PORT || 5000;
 app.listen(port, () => {
