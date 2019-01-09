@@ -1,5 +1,5 @@
 <template>
-  <div class="register">
+  <div class="register bg">
     <section class="form-container">
       <div class="manage-tip">
         <span class="title">在线管理系统</span>
@@ -9,7 +9,7 @@
           :rules="rules"
           ref="registerForm"
           label-width="80px"
-          class="register-form"
+          class="form-panel"
         >
           <el-form-item label="用户名" prop="name">
             <el-input v-model="registerUser.name" placeholder="请输入用户名"></el-input>
@@ -29,7 +29,7 @@
               <el-option label="员工" value="employee"></el-option>
             </el-select>
           </el-form-item>
-          <el-form-item>
+          <el-form-item class="register-btn-container">
             <el-button class="submit-btn" type="primary" @click="submitForm('registerForm')">提交</el-button>
           </el-form-item>
         </el-form>
@@ -103,32 +103,8 @@ export default {
 <style scoped>
 .register {
   position: relative;
-  width: 100%;
-  height: 100%;
-  background: url(../assets/bg.jpg) no-repeat center center;
-  background-size: 100% 100%;
 }
-.form-container {
-  position: absolute;
-  width: 370px;
-  height: 210px;
-  top: 10%;
-  left: 50%;
-  transform: translateX(-185px);
-  text-align: center;
-}
-
-.form-container .manage-tip .title {
-  font-family: "Microsoft YaHei";
-  font-weight: bold;
-  font-size: 26px;
-  color: #fff;
-}
-.register-form {
-  margin-top: 20px;
-  padding: 20px 40px 20px 20px;
-  border-radius: 5px;
-  box-shadow: 4px 4px 10px #ccc;
-  background-color: #fff;
+.register-btn-container /deep/ .el-form-item__content {
+  margin-left: 0 !important;
 }
 </style>
