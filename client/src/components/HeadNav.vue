@@ -3,11 +3,16 @@
     <el-row>
       <el-col :span="6" class="logo-container">
         <img src="../assets/solophone.jpg" class="logo">
-        <span class="title">在线管理系统</span>
+
+        <router-link to="/index">
+          <span class="title">在线管理系统</span>
+        </router-link>
       </el-col>
       <el-col :span="6" class="user">
         <div class="userinfo">
-          <img :src="user.avatar" class="avatar">
+          <router-link to="/infoshow">
+            <img :src="user.avatar" class="avatar">
+          </router-link>
           <div class="welcome">
             <p class="name comename">欢迎</p>
             <p class="name avatarname">{{user.name}}</p>
@@ -49,7 +54,7 @@ export default {
       }
     },
     showInfoList() {
-      console.log('个人信息')
+      this.$router.push('/infoshow');
     },
     logout() {
       // 清除token
@@ -91,6 +96,7 @@ export default {
   font-size: 22px;
   font-family: "Microsoft YaHei";
   letter-spacing: 3px;
+  color: #fff;
 }
 .user {
   width: 50%;
