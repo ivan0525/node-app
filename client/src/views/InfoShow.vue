@@ -28,8 +28,6 @@ export default {
 </script>
 
 <style scoped>
-.infoshow {
-}
 .container {
   display: flex;
   justify-content: center;

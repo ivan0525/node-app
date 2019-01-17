@@ -69,6 +69,9 @@ export default {
 
 <style scoped>
 .head-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 60px;
   min-width: 1000px;

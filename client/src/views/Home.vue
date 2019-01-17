@@ -18,14 +18,12 @@ export default {
 </script>
 
 <style scoped>
-.home {
-}
 .article {
   width: 600px;
   margin: 0 auto;
 }
 .title {
-  padding-top: 60px;
+  padding-top: 120px;
   text-align: center;
   font-size: 30px;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
