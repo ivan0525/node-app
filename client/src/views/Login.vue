@@ -69,6 +69,11 @@ export default {
 
               this.$store.dispatch('setAuthenticated', !this.isEmpty(decode));
               this.$store.dispatch('setUser', decode);
+
+              this.$message({
+                message: '登录成功',
+                type: 'success'
+              });
               // 请求成功跳转页面
               this.$router.push('/index');
             });
