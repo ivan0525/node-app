@@ -18,7 +18,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
 // connect to mongodb
-mongoose.connect(db)
+mongoose.connect(db, { useNewUrlParser: true })
   .then(() => {
     // success to connect
     console.log('MongoDB Connected');

@@ -43,7 +43,7 @@ export default {
   name: 'register',
   components: {},
   data() {
-    var validatePass2 = (rule, value, callback) => {
+    var validatePassword = (rule, value, callback) => {
       if (value === '') {
         callback(new Error('请再次输入密码'));
       } else if (value !== this.registerUser.password) {
@@ -73,7 +73,7 @@ export default {
           { min: 6, max: 30, message: '长度在6~30之间', trigger: 'blur' }
         ],
         password2: [
-          { required: true, validator: validatePass2, trigger: 'blur' },
+          { required: true, validator: validatePassword, trigger: 'blur' },
           { min: 6, max: 30, message: '长度在6~30之间', trigger: 'blur' }
         ]
       }
